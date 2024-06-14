@@ -44,18 +44,18 @@ section {
 
 #home {
     height: 100vh;
-    background: url('path/to/your/background.jpg') no-repeat center center/cover;
-    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: url('https://c.wallhere.com/photos/13/f1/circuit_boards_integrated_circuits_technology_chips-1792545.jpg!d') no-repeat center center/cover;
 }
 
 #home .intro {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
+    color: #fff;
 }
 
 #about .about-content {
@@ -103,4 +103,13 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
 }
