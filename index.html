@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Chris BILBA</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur mon portfolio</h1>
         <nav>
             <ul>
+                <li><a href="#home">Accueil</a></li>
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#skills">Compétences</a></li>
@@ -19,24 +20,33 @@
         </nav>
     </header>
 
+    <section id="home">
+        <div class="intro">
+            <h1>Chris BILBA</h1>
+            <p>Ingénieur en Génie Électrique et Informatique Industrielle</p>
+        </div>
+    </section>
+
     <section id="about">
         <h2>À propos de moi</h2>
-        <p>Personne ambitieuse et motivée avec une expérience en bureau d'étude souhaitant évoluer dans un environnement stimulant.</p>
-        <img src="path/to/your/photo.jpg" alt="Photo de Chris BILBA">
+        <div class="about-content">
+            <img src="path/to/your/photo.jpg" alt="Photo de Chris BILBA">
+            <p>Personne ambitieuse et motivée avec une expérience en bureau d'étude souhaitant évoluer dans un environnement stimulant.</p>
+        </div>
     </section>
 
     <section id="projects">
         <h2>Mes projets</h2>
         <div class="project">
-            <h3>Implémentation d’une Télémétrie en temps réel sur un Kart Electrique (2023 - 2024)</h3>
+            <h3>Implémentation d’une Télémétrie en temps réel sur un Kart Electrique</h3>
             <p>Etude et Réalisation d’un Harnais de capteurs de vitesse et température</p>
         </div>
         <div class="project">
-            <h3>Création d’un Club de Recyclage et Réparation électronique (2023 - 2024)</h3>
+            <h3>Création d’un Club de Recyclage et Réparation électronique</h3>
             <p>Récupération de matériel électronique défaillant</p>
         </div>
         <div class="project">
-            <h3>Station Météo Radio (2022 - 2023)</h3>
+            <h3>Station Météo Radio</h3>
             <p>Implémentation et programmation d’un microcontrôleur PIC16F1615</p>
         </div>
     </section>
