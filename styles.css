@@ -1,9 +1,15 @@
+:root {
+    --primary-color: #00bcd4;
+    --background-color: #1e1e1e;
+    --text-color: #cfd8dc;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1e1e1e;
-    color: #cfd8dc;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 header {
@@ -27,7 +33,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #00bcd4;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -103,4 +109,13 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
 }
