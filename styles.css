@@ -1,16 +1,18 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #1e1e1e;
+    color: #cfd8dc;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    position: fixed;
+    width: 100%;
+    background: rgba(30, 30, 30, 0.9);
     padding: 10px 0;
     text-align: center;
+    z-index: 1000;
 }
 
 nav ul {
@@ -21,49 +23,65 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #00bcd4;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
 }
 
 section {
-    padding: 20px;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-h2 {
-    color: #333;
+#home {
+    height: 100vh;
+    background: url('path/to/your/background.jpg') no-repeat center center/cover;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home .intro {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#about .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #about img {
     max-width: 150px;
     border-radius: 50%;
-    display: block;
-    margin: 10px auto;
+    margin-right: 20px;
 }
 
 .project {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 10px;
+    background-color: #333;
+    border: 1px solid #00bcd4;
+    padding: 20px;
     margin: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-section {
-    animation: fadeIn 2s ease-in-out;
+.project:hover {
+    transform: scale(1.05);
 }
 
 ul {
@@ -72,9 +90,17 @@ ul {
 }
 
 ul li {
-    background: #fff;
-    margin: 5px 0;
+    background: #333;
+    margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
