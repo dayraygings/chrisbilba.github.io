@@ -43,12 +43,13 @@ section {
 }
 
 #home {
-    height: 100vh;
+    height: 100vh; /* Full height to cover the viewport */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('https://c.wallhere.com/photos/13/f1/circuit_boards_integrated_circuits_technology_chips-1792545.jpg!d') no-repeat center center/cover;
+    background: url('images/circuit_boards.jpg') no-repeat center top/cover;
+    aspect-ratio: 16/9; /* Ensure the aspect ratio */
 }
 
 #home .intro {
@@ -97,19 +98,4 @@ ul li {
 }
 
 a {
-    color: #00bcd4;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.fade-out {
-    opacity: 0;
-    transition: opacity 1s ease-out;
-}
-
-.fade-in {
-    opacity: 1;
-}
+    color: #00
