@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Code pour les animations ou interactions supplémentaires
     const sections = document.querySelectorAll('section');
     const options = {
         threshold: 0.1
