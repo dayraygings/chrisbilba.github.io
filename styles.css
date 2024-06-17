@@ -1,21 +1,15 @@
-:root {
-    --primary-color: #00bcd4;
-    --background-color: #1e1e1e;
-    --text-color: #cfd8dc;
-}
-
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #1e1e1e;
+    color: #cfd8dc;
 }
 
 header {
     position: fixed;
     width: 100%;
-    background: rgba(30, 30, 30, 0.9);
+    background: rgba(30, 30, 30, 0.95); /* Augmentation de l'opacité */
     padding: 10px 0;
     text-align: center;
     z-index: 1000;
@@ -33,7 +27,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--primary-color);
+    color: #00bcd4;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -50,7 +44,7 @@ section {
 
 #home {
     height: 100vh;
-    background: url('path/to/your/background.jpg') no-repeat center center/cover;
+    background: url('https://c.wallhere.com/photos/13/f1/circuit_boards_integrated_circuits_technology_chips-1792545.jpg!d') no-repeat center center/cover;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -77,13 +71,20 @@ section {
     margin-right: 20px;
 }
 
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .project {
     background-color: #333;
     border: 1px solid #00bcd4;
     padding: 20px;
-    margin: 10px 0;
+    margin: 10px;
     border-radius: 10px;
     transition: transform 0.3s;
+    width: 300px;
 }
 
 .project:hover {
@@ -118,4 +119,49 @@ a:hover {
 
 .fade-in {
     opacity: 1;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #00bcd4;
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 5px 0;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin: 5px 0;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #00bcd4;
+    background: #333;
+    color: #cfd8dc;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #00bcd4;
+    color: #1e1e1e;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #fff;
 }
