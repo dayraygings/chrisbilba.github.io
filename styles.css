@@ -104,3 +104,13 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
