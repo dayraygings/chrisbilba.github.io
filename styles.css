@@ -1,278 +1,101 @@
-/* Réinitialisation des marges et paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif; /* Remplacez par votre police personnalisée */
+    background: url('path/to/your/background-image.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #1e1e1e;
-    color: #cfd8dc;
-    scroll-behavior: smooth;
 }
 
 header {
-    position: fixed;
-    width: 100%;
-    background: rgba(30, 30, 30, 0.95); /* Augmentation de l'opacité */
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #00bcd4;
+nav a {
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #fff;
+    font-size: 1.2rem;
 }
 
 section {
-    padding: 60px 20px;
+    padding: 2rem;
     text-align: center;
 }
 
-#home {
-    height: 100vh;
-    background: url('https://c.wallhere.com/photos/13/f1/circuit_boards_integrated_circuits_technology_chips-1792545.jpg!d') no-repeat center center/cover;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.intro h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
 }
 
-#home .intro {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
+.intro p {
+    font-size: 1.2rem;
 }
 
-#about .about-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+.intro a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-#about img {
-    max-width: 150px;
-    border-radius: 50%;
-    margin-right: 20px;
+.intro a:hover {
+    background: #0056b3;
 }
 
 .project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
 }
 
 .project {
-    background-color: #333;
-    border: 1px solid #00bcd4;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 300px;
-}
-
-.project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background: #333;
-    margin: 10px 0;
-    padding: 10px;
+    background: white;
+    padding: 1rem;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-a {
-    color: #00bcd4;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.fade-out {
-    opacity: 0;
-    transition: opacity 1s ease-out, transform 1s ease-out;
-    transform: translateY(20px);
-}
-
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.social-links {
-    margin-top: 20px;
+.project h3 {
+    margin-top: 0;
 }
 
 .social-links a {
-    color: #00bcd4;
-    margin: 0 10px;
-    font-size: 1.5em;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0 0.5rem;
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
 form label {
-    margin: 5px 0;
+    display: block;
+    margin: 0.5rem 0 0.2rem;
 }
 
 form input, form textarea {
-    padding: 10px;
-    margin: 5px 0;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 5px;
-    border: 1px solid #00bcd4;
-    background: #333;
-    color: #cfd8dc;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 form button {
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
+    background: #007BFF;
+    color: white;
     border: none;
     border-radius: 5px;
-    background: #00bcd4;
-    color: #1e1e1e;
-    cursor: pointer;
-    transition: background 0.3s;
 }
 
 form button:hover {
-    background: #fff;
-}
-
-/* Styles pour la frise chronologique */
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color: #00bcd4;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -2px;
-    border-radius: 2px;
-    animation: wave 10s infinite linear;
-}
-
-@keyframes wave {
-    0% { transform: translateY(-50%) translateX(0); }
-    50% { transform: translateY(-50%) translateX(5px); }
-    100% { transform: translateY(-50%) translateX(0); }
-}
-
-.container {
-    padding: 10px 40px;
-    position: relative;
-    width: 50%;
-}
-
-.container.left {
-    left: 0;
-}
-
-.container.right {
-    left: 50%;
-}
-
-.container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-color: white;
-    border: 4px solid #00bcd4;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.container.left::after {
-    right: -17px;
-}
-
-.container.right::after {
-    left: -17px;
-}
-
-.content {
-    padding: 20px 30px;
-    background-color: #333;
-    position: relative;
-    border-radius: 6px;
-    color: white;
-}
-
-.container.left .content {
-    margin-left: 45px;
-}
-
-.container.right .content {
-    margin-right: 45px;
-}
-
-.container.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    right: 30px;
-    border: medium solid #00bcd4;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #00bcd4;
-}
-
-.container.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    left: 30px;
-    border: medium solid #00bcd4;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #00bcd4 transparent transparent;
+    background: #0056b3;
 }
