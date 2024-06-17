@@ -1,172 +1,90 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1e1e1e;
-    color: #cfd8dc;
-    scroll-behavior: smooth;
+/* Styles pour la frise chronologique */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    background: rgba(30, 30, 30, 0.95); /* Augmentation de l'opacité */
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #00bcd4;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+.container.left {
+    left: 0;
 }
 
-nav ul li a {
-    color: #00bcd4;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+.container.right {
+    left: 50%;
 }
 
-nav ul li a:hover {
-    color: #fff;
-}
-
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-#home {
-    height: 100vh;
-    background: url('https://c.wallhere.com/photos/13/f1/circuit_boards_integrated_circuits_technology_chips-1792545.jpg!d') no-repeat center center/cover;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-#home .intro {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#about .about-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-#about img {
-    max-width: 150px;
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #00bcd4;
+    top: 15px;
     border-radius: 50%;
-    margin-right: 20px;
+    z-index: 1;
 }
 
-.project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.container.right::after {
+    left: -16px;
 }
 
-.project {
+.content {
+    padding: 20px 30px;
     background-color: #333;
-    border: 1px solid #00bcd4;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 300px;
+    position: relative;
+    border-radius: 6px;
 }
 
-.project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+.container.left .content {
+    margin-left: 45px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.container.right .content {
+    margin-right: 45px;
 }
 
-ul li {
-    background: #333;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
+.container.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #00bcd4;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #00bcd4;
 }
 
-a {
-    color: #00bcd4;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.fade-out {
-    opacity: 0;
-    transition: opacity 1s ease-out, transform 1s ease-out;
-    transform: translateY(20px);
-}
-
-.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links a {
-    color: #00bcd4;
-    margin: 0 10px;
-    font-size: 1.5em;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form label {
-    margin: 5px 0;
-}
-
-form input, form textarea {
-    padding: 10px;
-    margin: 5px 0;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 5px;
-    border: 1px solid #00bcd4;
-    background: #333;
-    color: #cfd8dc;
-}
-
-form button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background: #00bcd4;
-    color: #1e1e1e;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-form button:hover {
-    background: #fff;
+.container.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #00bcd4;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #00bcd4 transparent transparent;
 }
